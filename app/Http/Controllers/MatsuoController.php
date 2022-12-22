@@ -11,6 +11,8 @@ use App\Models\Question;
 class MatsuoController extends Controller
 {
     public function index(){
+        $user = Auth::guard('pro')->getUser();
+        // dd($user);
         return view('matsuo.login.index');
     }
 
@@ -24,8 +26,8 @@ class MatsuoController extends Controller
         $questions = Question::where('user_id', 2)->get();
         // dd($questions->count());
         return view('matsuo.question.list', compact('questions'));
-        // if(Auth::guard('www')->attempt($credentials)){
-        //     // $user = Auth::guard('www')->getUser();
+        // if(Auth::guard('pro')->attempt($credentials)){
+        //     // $user = Auth::guard('pro')->getUser();
         //     $questions = Question::where('user_id', 2)->get();
         //     return view('matsuo.question.list',compact('questions'));
 
@@ -42,7 +44,7 @@ class MatsuoController extends Controller
     public function store(Request $request){
 
         // dd("dd");
-        // $user = Auth::guard('www')->getUser();
+        // $user = Auth::guard('pro')->getUser();
 
         Question::create([
             'user_id' => 2,

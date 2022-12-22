@@ -11,6 +11,7 @@ use Hash;
 class RegisterController extends Controller
 {
     public function index(){
+        dump(Auth::guard('pro')->getUser());
         return view('www.register.index');
     }
     public function complete(Request $request){

@@ -16,13 +16,16 @@ class LoginController extends Controller
             'email' => $request->get('email'),
             'password' => $request->get('password')
         ];
-        if(Auth::guard('www')->attempt($credentials)){
-            dd("ok");
+        if(Auth::guard('pro')->attempt($credentials, false)){
+            return redirect('/nihei/index');
+            // dump(Auth::user());
+            // dump(Auth::guard('pro')->getUser());
+            // dd("ok");
         }else{
-            dd("ng");
+            // dd("ng");
         }
 
-        dd("store");
+        // dd("store");
         return view('www.login.complete');
     }
 }

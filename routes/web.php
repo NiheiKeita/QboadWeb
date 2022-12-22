@@ -25,14 +25,14 @@ Route::get('/','App\Http\Controllers\TopController@index');
 Route::post('/show', 'App\Http\Controllers\TopController@show')->name('show');
 
 Route::namespace('App\Http\Controllers')->name('www.')->group(function () {
-    Route::get('/register/index', 'RegisterController@index')->name('register.index');
     Route::post('/register/complete', 'RegisterController@complete')->name('register.complete');
     Route::get('/login/index', 'LoginController@index')->name('login.index');
     Route::post('/login/complete', 'LoginController@complete')->name('login.complete');
 
 
-    Route::middleware('auth:www')->group(function () {
-
+    Route::middleware('auth:pro')->group(function () {
+        Route::get('/register/index', 'RegisterController@index')->name('register.index');
+        Route::get('/nihei/index', 'MatsuoController@index')->name('nihei.index');
     });
 });
 Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {
@@ -52,11 +52,11 @@ Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {
 });
 
 Route::namespace('App\Http\Controllers\Api')->name('api.')->group(function () {
-    Route::get('/api/register/index', 'RegisterController@index')->name('register.index');
-    Route::post('/api/register/complete', 'RegisterController@complete')->name('register.complete');
-    Route::get('/api/login/index', 'LoginController@index')->name('login.index');
-    Route::post('/api/login/complete', 'LoginController@complete')->name('login.complete');
-    Route::middleware('auth:www')->group(function () {
+    Route::get('/api/register/index', 'RegisterController@index');
+    Route::post('/api/register/complete', 'RegisterController@complete');
+    Route::get('/api/login/index', 'LoginController@index');
+    Route::post('/api/login/complete', 'LoginController@complete');
+    Route::middleware('auth:pro')->group(function () {
 
     });
 });
