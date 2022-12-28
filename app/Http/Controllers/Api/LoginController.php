@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function index(){
         return [
-            "status" => "ng",
+            "status" => "ok",
         ];
 
     }
@@ -20,7 +20,7 @@ class LoginController extends Controller
             'email' => $request->get('email'),
             'password' => $request->get('password')
         ];
-        if(Auth::guard('www')->attempt($credentials)){
+        if(Auth::guard('pro')->attempt($credentials)){
             return [
                 "status" => "ok",
             ];
