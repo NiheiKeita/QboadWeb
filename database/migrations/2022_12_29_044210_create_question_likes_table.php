@@ -13,9 +13,11 @@ class CreateQuestionLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('uestion_likes', function (Blueprint $table) {
+        Schema::create('question_likes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->bigInteger('question_id');
+            $table->bigInteger('user_id');
         });
     }
 
@@ -26,6 +28,6 @@ class CreateQuestionLikesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('uestion_likes');
+        Schema::dropIfExists('question_likes');
     }
 }

@@ -16,6 +16,10 @@ class CreateSolvesTable extends Migration
         Schema::create('solves', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->bigInteger('user_id');
+            $table->bigInteger('question_id');
+            $table->bigInteger('choice_id');
+            $table->integer('is_correct')->default(1)->comment('0:不正解 1:正解');
         });
     }
 

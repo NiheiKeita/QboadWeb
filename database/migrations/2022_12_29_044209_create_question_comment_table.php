@@ -16,6 +16,8 @@ class CreateQuestionCommentTable extends Migration
         Schema::create('question_comment', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->bigInteger('question_id');
+            $table->bigInteger('comment_id');
         });
     }
 
