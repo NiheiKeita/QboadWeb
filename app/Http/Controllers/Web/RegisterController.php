@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -13,6 +13,11 @@ class RegisterController extends Controller
     public function index(){
         dump(Auth::guard('pro')->getUser());
         return view('www.register.index');
+    }
+
+    public function input(Request $request){
+
+        return view('www.register.input');
     }
     public function complete(Request $request){
         User::create([

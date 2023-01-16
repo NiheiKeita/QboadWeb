@@ -21,13 +21,19 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/show', 'TopController@show')->name('show');
 // Route::get('/', [TopController::class, 'index'])->name('index');
 // Route::get('/', [TopController::class, 'show'])->name('show');
-Route::get('/','App\Http\Controllers\TopController@index');
-Route::post('/show', 'App\Http\Controllers\TopController@show')->name('show');
+Route::post('/show', 'App\Http\Controllers\Web\TopController@show')->name('show');
 
-Route::namespace('App\Http\Controllers')->name('www.')->group(function () {
+Route::namespace('App\Http\Controllers\Web')->name('www.')->group(function () {
+    Route::get('/','TopController@index')->name('top');
+
+    Route::get('/register/input', 'RegisterController@input')->name('register.input');
     Route::post('/register/complete', 'RegisterController@complete')->name('register.complete');
     Route::get('/login/index', 'LoginController@index')->name('login.index');
     Route::post('/login/complete', 'LoginController@complete')->name('login.complete');
+
+    Route::match(['get', 'post'], '/question/index', 'QuestionController@index')->name('question.index');
+    Route::match(['get', 'post'], '/question/create', 'QuestionController@create')->name('question.create');
+    Route::match(['get', 'post'], '/question/solve', 'QuestionController@solve')->name('question.solve');
 
 
     Route::middleware('auth:pro')->group(function () {
@@ -35,21 +41,21 @@ Route::namespace('App\Http\Controllers')->name('www.')->group(function () {
         Route::get('/nihei/index', 'MatsuoController@index')->name('nihei.index');
     });
 });
-Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {
-    Route::get('/matsuo/login/index', 'MatsuoController@index')->name('login.index');
+// Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {
+//     Route::get('/matsuo/login/index', 'MatsuoController@index')->name('login.index');
 
-    Route::post('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
-    Route::get('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
+//     Route::post('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
+//     Route::get('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
 
-    Route::post('/matsuo/question/input', 'MatsuoController@input')->name('question.input');
-    Route::get('/matsuo/question/input', 'MatsuoController@input')->name('question.input');
+//     Route::post('/matsuo/question/input', 'MatsuoController@input')->name('question.input');
+//     Route::get('/matsuo/question/input', 'MatsuoController@input')->name('question.input');
 
-    Route::post('/matsuo/question/store', 'MatsuoController@store')->name('question.store');
-    // Route::middleware('auth:www')->group(function () {
-    //     Route::post('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
-    //     Route::get('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
-    // });
-});
+//     Route::post('/matsuo/question/store', 'MatsuoController@store')->name('question.store');
+//     // Route::middleware('auth:www')->group(function () {
+//     //     Route::post('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
+//     //     Route::get('/matsuo/question/list', 'MatsuoController@list')->name('question.list');
+//     // });
+// });
 
 Route::namespace('App\Http\Controllers\Api')->name('api.')->group(function () {
     Route::get('/api/register/index', 'RegisterController@index');
