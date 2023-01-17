@@ -4,10 +4,10 @@
 @include('www.layouts.header')
 
 <main>
-    ログイン完了
-    <a href="{{route('www.question.index')}}">
+    お知らせ
+    <a href="{{route('www.information.detail',1)}}">
         <div class="button">
-            問題一覧
+            お知らせ詳細
         </div>
     </a>
 </main>

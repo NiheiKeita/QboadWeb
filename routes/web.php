@@ -24,21 +24,24 @@ use Illuminate\Support\Facades\Route;
 Route::post('/show', 'App\Http\Controllers\Web\TopController@show')->name('show');
 
 Route::namespace('App\Http\Controllers\Web')->name('www.')->group(function () {
-    Route::get('/','TopController@index')->name('top');
+    Route::match(['get', 'post'], '/','TopController@index')->name('top');
 
-    Route::get('/register/input', 'RegisterController@input')->name('register.input');
+    Route::match(['get', 'post'], '/register/input', 'RegisterController@input')->name('register.input');
     Route::post('/register/complete', 'RegisterController@complete')->name('register.complete');
-    Route::get('/login/index', 'LoginController@index')->name('login.index');
+    Route::match(['get', 'post'], '/login/index', 'LoginController@index')->name('login.index');
     Route::post('/login/complete', 'LoginController@complete')->name('login.complete');
 
-    Route::match(['get', 'post'], '/question/index', 'QuestionController@index')->name('question.index');
-    Route::match(['get', 'post'], '/question/create', 'QuestionController@create')->name('question.create');
-    Route::match(['get', 'post'], '/question/solve', 'QuestionController@solve')->name('question.solve');
-
-
     Route::middleware('auth:pro')->group(function () {
-        Route::get('/register/index', 'RegisterController@index')->name('register.index');
-        Route::get('/nihei/index', 'MatsuoController@index')->name('nihei.index');
+
+        Route::match(['get', 'post'],'/question/index', 'QuestionController@index')->name('question.index');
+        Route::match(['get', 'post'],'/question/create', 'QuestionController@create')->name('question.create');
+        Route::match(['get', 'post'],'/question/solve/{id}', 'QuestionController@solve')->name('question.solve');
+
+        Route::match(['get', 'post'],'/serch/index', 'SerchController@index')->name('serch.index');
+
+        Route::match(['get', 'post'],'/information/index', 'InformationController@index')->name('information.index');
+        Route::match(['get', 'post'],'/information/detail/{id}', 'InformationController@detail')->name('information.detail');
+
     });
 });
 // Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {
@@ -62,6 +65,7 @@ Route::namespace('App\Http\Controllers\Api')->name('api.')->group(function () {
     Route::post('/api/register/complete', 'RegisterController@complete');
     Route::get('/api/login/index', 'LoginController@index');
     Route::post('/api/login/complete', 'LoginController@complete');
+
     Route::middleware('auth:pro')->group(function () {
 
     });

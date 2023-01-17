@@ -1,12 +1,10 @@
 
-
-
 @extends('www.layouts.layout')
 @section('content')
 @include('www.layouts.header')
 
 <main>
-    登録完了
+    お知らせ詳細
 </main>
 @include('www.layouts.footer')
 @endsection

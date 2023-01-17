@@ -14,6 +14,7 @@ class QuestionController extends Controller
         return view('www.question.create',compact('request'));
     }
     public function solve(Request $request){
+        dump($request->id);
         return view('www.question.solve',compact('request'));
     }
 }

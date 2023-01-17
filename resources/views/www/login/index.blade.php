@@ -1,14 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{ asset('/public/css/style.css') }}">
-  <title></title>
-</head>
-<body>
+@extends('www.layouts.layout')
+@section('content')
+@include('www.layouts.header')
+
+<main>
     <article>
         <div class="side">
             ログイン
@@ -22,5 +17,6 @@
             </form>
         </div>
     </article>
-</body>
-</html>
+</main>
+@include('www.layouts.footer')
+@endsection

@@ -6,7 +6,7 @@
 @include('www.layouts.header')
 
 <main>
-    登録完了
+    検索Index
 </main>
 @include('www.layouts.footer')
 @endsection

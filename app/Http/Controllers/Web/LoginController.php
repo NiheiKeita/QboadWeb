@@ -17,7 +17,7 @@ class LoginController extends Controller
             'password' => $request->get('password')
         ];
         if(Auth::guard('pro')->attempt($credentials, false)){
-            return redirect('/nihei/index');
+            return view('www.login.complete');
             // dump(Auth::user());
             // dump(Auth::guard('pro')->getUser());
             // dd("ok");
@@ -26,6 +26,6 @@ class LoginController extends Controller
         }
 
         // dd("store");
-        return view('www.login.complete');
+        return view('www.login.index');
     }
 }
