@@ -42,6 +42,8 @@ Route::namespace('App\Http\Controllers\Web')->name('www.')->group(function () {
         Route::match(['get', 'post'],'/information/index', 'InformationController@index')->name('information.index');
         Route::match(['get', 'post'],'/information/detail/{id}', 'InformationController@detail')->name('information.detail');
 
+        Route::match(['get', 'post'],'/account/index', 'AccountController@index')->name('account.index');
+
     });
 });
 // Route::namespace('App\Http\Controllers')->name('matsuo.')->group(function () {

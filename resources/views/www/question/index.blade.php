@@ -15,16 +15,6 @@
             問題作成
         </div>
     </a>
-    <a href="{{route('www.serch.index')}}">
-        <div class="button">
-            検索
-        </div>
-    </a>
-    <a href="{{route('www.information.index')}}">
-        <div class="button">
-            お知らせ
-        </div>
-    </a>
 </main>
 @include('www.layouts.footer')
 @endsection
