@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class SerchController extends Controller
 {
+    private $pageName = "serch";
+
     public function index(Request $request){
-        return view('www.serch.index');
+        $pageName = $this->pageName;
+        return view('www.serch.index',compact('pageName'));
     }
 
 }

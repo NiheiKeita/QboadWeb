@@ -16,15 +16,25 @@ footer .sp-fixed-menu ul {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100px;
+  height: 50px;
 }
 footer .sp-fixed-menu ul li {
-  border-left: 1px solid #C0C0C0;
-  border-right: 1px solid #C0C0C0;
+  border-top: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
 }
 footer .sp-fixed-menu ul li + li {
   border-left: 0;
-  border-right: 1px solid #C0C0C0;
+  border-right: 1px solid #EEEEEE;
+}
+footer .sp-fixed-menu ul li.not_selected :hover {
+  background-color: #EEEEEE;
+}
+footer .sp-fixed-menu ul li.selected {
+  background-color: #99CCFF;
+}
+footer .sp-fixed-menu ul li.selected :hover {
+  background-color: #EEEEEE;
 }
 footer .sp-fixed-menu ul li {
   justify-content: center;

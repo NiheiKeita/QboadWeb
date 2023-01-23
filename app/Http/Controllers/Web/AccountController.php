@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {
+    private $pageName = "account";
+
     public function index(Request $request){
-        return view('www.account.index');
+        $pageName = $this->pageName;
+        return view('www.account.index',compact('pageName'));
     }
     // public function detail(Request $request){
     //     dump($request->id);
