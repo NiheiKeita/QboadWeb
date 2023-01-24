@@ -9,9 +9,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
-use App\Models\User;
 
-class Question extends Model
+class HashTag extends Model
 {
     use SoftDeletes;
 
@@ -19,8 +18,4 @@ class Question extends Model
         "id"
     ];
 
-    Public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

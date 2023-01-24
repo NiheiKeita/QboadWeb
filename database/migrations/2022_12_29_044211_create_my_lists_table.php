@@ -16,6 +16,7 @@ class CreateMyListsTable extends Migration
         Schema::create('my_lists', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('user_id');
             $table->string('my_list_name')->nullable();
         });

@@ -16,6 +16,7 @@ class CreateSolvesTable extends Migration
         Schema::create('solves', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('user_id');
             $table->bigInteger('question_id');
             $table->bigInteger('choice_id');

@@ -16,6 +16,7 @@ class CreateMyListQuestionTable extends Migration
         Schema::create('my_list_question', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('my_list_id');
             $table->bigInteger('question_id');
             $table->integer('is_to_the_question')->default(0)->comment('ソート');

@@ -16,6 +16,7 @@ class CreateCommentCommentTable extends Migration
         Schema::create('comment_comment', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('to_comment_id')->comment('親のコメント');
             $table->bigInteger('from_comment_id')->comment('子のコメント');
         });

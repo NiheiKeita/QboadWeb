@@ -16,6 +16,7 @@ class CreateHashTagsTable extends Migration
         Schema::create('hash_tags', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('question_id');
             $table->string('hash_tag_content')->nullable();
         });

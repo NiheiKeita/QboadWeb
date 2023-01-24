@@ -16,6 +16,7 @@ class CreateChoicesTable extends Migration
         Schema::create('choices', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
             $table->bigInteger('question_id');
             $table->string('choice_content')->nullable();
             $table->integer('is_correct')->default(0)->comment('0:不正解 1:正解');

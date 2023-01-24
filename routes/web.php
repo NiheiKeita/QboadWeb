@@ -35,6 +35,7 @@ Route::namespace('App\Http\Controllers\Web')->name('www.')->group(function () {
 
         Route::match(['get', 'post'],'/question/index', 'QuestionController@index')->name('question.index');
         Route::match(['get', 'post'],'/question/create', 'QuestionController@create')->name('question.create');
+        Route::post('/question/store', 'QuestionController@store')->name('question.store');
         Route::match(['get', 'post'],'/question/solve/{id}', 'QuestionController@solve')->name('question.solve');
 
         Route::match(['get', 'post'],'/serch/index', 'SerchController@index')->name('serch.index');
