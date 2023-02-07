@@ -1,0 +1,158 @@
+
+/*------------------------------------
+- COLOR primary
+------------------------------------*/
+
+$primary__t1: #FF0000;
+$primary__t2: #cc0000;
+$primary__t3: #ff9e9e;
+$primary__t4: #ffb7b7;
+$primary__t5: #840000;
+$primary__t6: #bc0000;
+$primary__t7: #db0000;
+$primary__t8: #510000;
+$primary__t9: #ffcccc;
+
+$primary__shadow: rgba(255, 0, 0, 0.5);
+$primary__text_color_dark_bright: #fff;
+
+
+.alert-primary  {
+  color: $primary__t5;
+  background-color: $primary__t9;
+  border-color: $primary__t4;
+}
+
+.alert-primary  hr {
+  border-top-color: $primary__t3;
+}
+
+.alert-primary  .alert-link {
+  color: $primary__t8;
+}
+
+.badge-primary  {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t1;
+}
+
+.badge-primary [href]:hover, .badge-primary [href]:focus {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t2;
+}
+
+.bg-primary  {
+  background-color: $primary__t1 !important;
+}
+
+a.bg-primary :hover, a.bg-primary :focus,
+button.bg-primary :hover,
+button.bg-primary :focus {
+  background-color: $primary__t2 !important;
+}
+
+.border-primary  {
+  border-color: $primary__t1 !important;
+}
+
+.btn-primary  {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t1;
+  border-color: $primary__t1;
+}
+
+.btn-primary :hover {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t7;
+  border-color: $primary__t2;
+}
+
+.btn-primary :focus, .btn-primary .focus {
+  box-shadow: 0 0 0 0.2rem $primary__shadow;
+}
+
+.btn-primary .disabled, .btn-primary :disabled {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t1;
+  border-color: $primary__t1;
+}
+
+.btn-primary :not(:disabled):not(.disabled):active, .btn-primary :not(:disabled):not(.disabled).active, .show > .btn-primary .dropdown-toggle {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t2;
+  border-color: $primary__t6;
+}
+
+.btn-primary :not(:disabled):not(.disabled):active:focus, .btn-primary :not(:disabled):not(.disabled).active:focus, .show > .btn-primary .dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary__shadow;
+}
+
+.btn-outline-primary  {
+  color: $primary__t1;
+  background-color: transparent;
+  border-color: $primary__t1;
+}
+
+.btn-outline-primary :hover {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t1;
+  border-color: $primary__t1;
+}
+
+.btn-outline-primary :focus, .btn-outline-primary .focus {
+  box-shadow: 0 0 0 0.2rem $primary__shadow;
+}
+
+.btn-outline-primary .disabled, .btn-outline-primary :disabled {
+  color: $primary__t1;
+  background-color: transparent;
+}
+
+.btn-outline-primary :not(:disabled):not(.disabled):active, .btn-outline-primary :not(:disabled):not(.disabled).active, .show > .btn-outline-primary .dropdown-toggle {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t1;
+  border-color: $primary__t1;
+}
+
+.btn-outline-primary :not(:disabled):not(.disabled):active:focus, .btn-outline-primary :not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary .dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary__shadow;
+}
+
+.list-group-item-primary  {
+  color: $primary__t5;
+  background-color: $primary__t4;
+}
+
+.list-group-item-primary .list-group-item-action:hover, .list-group-item-primary .list-group-item-action:focus {
+  color: $primary__t5;
+  background-color: $primary__t3;
+}
+
+.list-group-item-primary .list-group-item-action.active {
+  color: $primary__text_color_dark_bright;
+  background-color: $primary__t5;
+  border-color: $primary__t5;
+}
+
+.table-primary ,
+.table-primary  > th,
+.table-primary  > td {
+  background-color: $primary__t4;
+}
+
+.table-hover .table-primary :hover {
+  background-color: $primary__t3;
+}
+
+.table-hover .table-primary :hover > td,
+.table-hover .table-primary :hover > th {
+  background-color: $primary__t3;
+}
+
+.text-primary  {
+  color: $primary__t1 !important;
+}
+
+a.text-primary :hover, a.text-primary :focus {
+  color: $primary__t2 !important;
+}

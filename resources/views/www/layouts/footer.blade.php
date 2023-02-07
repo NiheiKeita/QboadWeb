@@ -1,6 +1,6 @@
 <footer>
     <div class="sp-fixed-menu">
-        <ul>
+        {{-- <ul>
             <li class="@if(!empty($pageName) && $pageName=="question") selected @else not_selected @endif">
                 <a href="{{route('www.question.index')}}">
                     <div>問題</div>
@@ -21,6 +21,6 @@
                     <div>アカウント</div>
                 </a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 </footer>
