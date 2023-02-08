@@ -18,7 +18,7 @@
   width: 30px;
   height: 2px;
   left: 6px;
-  background: #BBBBBB;
+  background: #fff;
   transition: 0.3s ease-in-out;
 }
 
@@ -54,11 +54,11 @@ nav.globalMenuSp {
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 75%;
+  left: 50%;
   color: #fff;
   background: rgba(71, 70, 73, 0.8);
   text-align: center;
-  width: 25%;
+  width: 50%;
   height: 100%;
   transform: translateX(100%);
   transition: all 0.6s;

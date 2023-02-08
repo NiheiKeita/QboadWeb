@@ -2,53 +2,53 @@
 - COLOR primary
 ------------------------------------*/
 .alert-primary {
-  color: #840000;
-  background-color: #ffcccc;
-  border-color: #ffb7b7;
+  color: #ffab5b;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .alert-primary hr {
-  border-top-color: #ff9e9e;
+  border-top-color: #ffab5b;
 }
 
 .alert-primary .alert-link {
-  color: #510000;
+  color: #ffab5b;
 }
 
 .badge-primary {
   color: #fff;
-  background-color: #FF0000;
+  background-color: #ffab5b;
 }
 
 .badge-primary [href]:hover, .badge-primary [href]:focus {
   color: #fff;
-  background-color: #cc0000;
+  background-color: #ffab5b;
 }
 
 .bg-primary {
-  background-color: #FF0000 !important;
+  background-color: #ffab5b !important;
 }
 
 a.bg-primary :hover, a.bg-primary :focus,
 button.bg-primary :hover,
 button.bg-primary :focus {
-  background-color: #cc0000 !important;
+  background-color: #ffab5b !important;
 }
 
 .border-primary {
-  border-color: #FF0000 !important;
+  border-color: #ffab5b !important;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #FF0000;
-  border-color: #FF0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-primary :hover {
   color: #fff;
-  background-color: #db0000;
-  border-color: #cc0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-primary :focus, .btn-primary .focus {
@@ -57,14 +57,14 @@ button.bg-primary :focus {
 
 .btn-primary .disabled, .btn-primary :disabled {
   color: #fff;
-  background-color: #FF0000;
-  border-color: #FF0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-primary :not(:disabled):not(.disabled):active, .btn-primary :not(:disabled):not(.disabled).active, .show > .btn-primary .dropdown-toggle {
   color: #fff;
-  background-color: #cc0000;
-  border-color: #bc0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-primary :not(:disabled):not(.disabled):active:focus, .btn-primary :not(:disabled):not(.disabled).active:focus, .show > .btn-primary .dropdown-toggle:focus {
@@ -72,15 +72,15 @@ button.bg-primary :focus {
 }
 
 .btn-outline-primary {
-  color: #FF0000;
+  color: #ffab5b;
   background-color: transparent;
-  border-color: #FF0000;
+  border-color: #ffab5b;
 }
 
 .btn-outline-primary :hover {
   color: #fff;
-  background-color: #FF0000;
-  border-color: #FF0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-outline-primary :focus, .btn-outline-primary .focus {
@@ -88,14 +88,14 @@ button.bg-primary :focus {
 }
 
 .btn-outline-primary .disabled, .btn-outline-primary :disabled {
-  color: #FF0000;
+  color: #ffab5b;
   background-color: transparent;
 }
 
 .btn-outline-primary :not(:disabled):not(.disabled):active, .btn-outline-primary :not(:disabled):not(.disabled).active, .show > .btn-outline-primary .dropdown-toggle {
   color: #fff;
-  background-color: #FF0000;
-  border-color: #FF0000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .btn-outline-primary :not(:disabled):not(.disabled):active:focus, .btn-outline-primary :not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary .dropdown-toggle:focus {
@@ -103,40 +103,40 @@ button.bg-primary :focus {
 }
 
 .list-group-item-primary {
-  color: #840000;
-  background-color: #ffb7b7;
+  color: #ffab5b;
+  background-color: #ffab5b;
 }
 
 .list-group-item-primary .list-group-item-action:hover, .list-group-item-primary .list-group-item-action:focus {
-  color: #840000;
-  background-color: #ff9e9e;
+  color: #ffab5b;
+  background-color: #ffab5b;
 }
 
 .list-group-item-primary .list-group-item-action.active {
   color: #fff;
-  background-color: #840000;
-  border-color: #840000;
+  background-color: #ffab5b;
+  border-color: #ffab5b;
 }
 
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #ffb7b7;
+  background-color: #ffab5b;
 }
 
 .table-hover .table-primary :hover {
-  background-color: #ff9e9e;
+  background-color: #ffab5b;
 }
 
 .table-hover .table-primary :hover > td,
 .table-hover .table-primary :hover > th {
-  background-color: #ff9e9e;
+  background-color: #ffab5b;
 }
 
 .text-primary {
-  color: #FF0000 !important;
+  color: #ffab5b !important;
 }
 
 a.text-primary :hover, a.text-primary :focus {
-  color: #cc0000 !important;
+  color: #ffab5b !important;
 }/*# sourceMappingURL=thema.css.map */

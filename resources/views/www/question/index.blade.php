@@ -3,37 +3,32 @@
 @section('content')
 @include('www.layouts.header')
 
-<main>
-    <h1>
-        問題一覧
-    </h1>
-    <div>
-        {{-- <a href="{{route('www.question.solve',1)}}">
-            <div class="button">
-                問題を解く
-            </div>
-        </a> --}}
-        <div>
-            <a href="{{route('www.question.create')}}">
-                {{-- <div class="button"> --}}
-                    問題作成
-                {{-- </div> --}}
-            </a>
-        </div>
+<body class="container">
+    <div class="c enter-block">
+        <div class="container mt-1 col-lg-4">
+            <h2 class="side mt-3 text-center">
+                問題一覧
+            </h2>
+            <div>
 
-        <ul class="list_basic_design">
-            @foreach ($questions as $question)
-            <li>
-                <a href="{{route('www.question.solve',$question->user->id)}}">
-                    <div class="button">
-                        {{$question->question_content}}
-                        {{$question->user->user_name}}
-                    </div>
+                <ul class="list_basic_design">
+                    @foreach ($questions as $question)
+                    <li>
+                        <a href="{{route('www.question.solve',$question->user->id)}}">
+                            <div class="button">
+                                {{$question->question_content}}
+                                {{$question->user->user_name}}
+                            </div>
+                        </a>
+                    </li>
+                    @endforeach
+                </ul>
+                <a href="{{route('www.question.create')}}">
+                    <i class="bi bi-plus-circle-fill question_create_button"></i>
                 </a>
-            </li>
-            @endforeach
-        </ul>
+            </div>
+        </div>
     </div>
-</main>
+</body>
 @include('www.layouts.footer')
 @endsection

@@ -4,31 +4,30 @@
 @section('content')
 @include('www.layouts.header')
 
-<main>
-    <article>
-        <div class="side">
-            <p>Top
-            </p>
-        </div>
-
-        <a href="{{route('www.register.input')}}">
-            <div class="button">
-                登録
+<body class="container">
+    <div class="c enter-block">
+        <div class="container mt-1 col-lg-4">
+            <h2 class="side mt-3 text-center">
+                Top
+            </h2>
+            <div>
+                <div class="button_wrapper text_wrapper text-center pb-40 mt-5">
+                    <a href="{{route('www.register.input')}}">
+                        <div class="btn button color_thema_button text-center align-items-center" >
+                            登録
+                        </div>
+                    </a>
+                </div>
+                <div class="button_wrapper text_wrapper text-center pb-40 mt-5">
+                    <a href="{{route('www.login.index')}}">
+                        <div class="btn button color_thema_button text-center align-items-center">
+                            ログイン
+                        </div>
+                    </a>
+                </div>
             </div>
-        </a>
-        <a href="{{route('www.login.index')}}">
-            <div class="button">
-                ログイン
-            </div>
-        </a>
-        <div class="content">
-            <form method="POST" action="{{route('show')}}" accept-charset="UTF-8">
-                @csrf
-                <p>名前：<input name="input_text" type="text" value=""></p>
-                <input type="submit" value="デフォルト">
-            </form>
         </div>
-    </article>
-</main>
+    </div>
+</body>
 @include('www.layouts.footer')
 @endsection

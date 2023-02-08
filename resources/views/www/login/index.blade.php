@@ -6,31 +6,18 @@
 <main>
     <body class="container">
         <div class="c enter-block">
-            {{-- <div class="content">
-                <form method="POST" action="{{route('www.login.complete')}}" accept-charset="UTF-8">
-                    @csrf
-                    <p>email</p><input name="email" type="text" value="">
-                    <p>Password：<input name="password" type="text" value=""></p>
-                    <button type="button" class="btn btn-primary">ログイン</button>
-                </form>
-            </div> --}}
-            {{-- <div class="justify-content-center" class="w-50">
-                <form method="POST" action="{{route('www.login.complete')}}">
-                    @csrf
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">メールアドレス</label>
-                        <input type="email" class="form-control" name="email">
+
+            <div class="mt-2 return_button">
+                <a href="javascript:history.back();">
+                    <div class="text-start align-items-center">
+                        <i class="bi bi-chevron-double-left"></i>
+                        戻る
                     </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">パスワード</label>
-                        <input type="password" class="form-control" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">ログイン</button>
-                </form>
-            </div> --}}
+                </a>
+            </div>
             <div class="container mt-5 col-lg-4">
                 <h2 class="side mt-3 text-center">
-                    ログイン画面
+                    ログイン
                 </h2>
                 <form method="POST" >
                     @csrf
@@ -68,12 +55,28 @@
 
                     <div class="button_wrapper text_wrapper text-center pb-40 mt-5">
                         <a href="javascript:void(0)">
-                            <div class="btn btn-outline-primary button primary_line_button text-center align-items-center submit_button" data-action="{{route('www.login.complete')}}">
+                            <div class="btn button color_thema_button text-center align-items-center submit_button" data-action="{{route('www.login.complete')}}">
                                 ログイン
                             </div>
                         </a>
                     </div>
                 </form>
+
+                <div class="mt-3">
+                    <a href="javascript:void(0)">
+                        <div class="text-center align-items-center" data-action="">
+                            パスワードを忘れた方はこちら
+                        </div>
+                    </a>
+                </div>
+
+                <div class="mt-2">
+                    <a href="{{route('www.register.input')}}">
+                        <div class="text-center align-items-center" data-action="">
+                            新規登録
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </body>

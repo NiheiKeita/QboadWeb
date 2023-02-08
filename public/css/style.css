@@ -6,4 +6,60 @@ header {
   top: 0px;
   right: 0px;
   left: 0px;
+}
+
+.color_thema {
+  background-color: #ffad5b;
+}
+
+.color_thema_button:hover {
+  background-color: #fff;
+  border-color: #ffad5b;
+  color: #ffad5b;
+}
+
+.color_thema_button {
+  background-color: #ffad5b;
+  color: #fff;
+}
+
+.color_header_thema_button:hover {
+  background-color: #fff;
+  border-color: #ffad5b;
+  color: #ffad5b;
+}
+
+.color_header_thema_button {
+  background-color: #ffad5b;
+  color: #fff;
+  border-color: #fff;
+}
+
+.question_create_button {
+  font-size: 70px;
+  color: #ffad5b;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin-right: max(15px, 5%);
+  margin-bottom: max(15px, 5%);
+}
+
+.return_button {
+  font-size: 15px;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+  margin-left: 15px;
+  margin-top: 85px;
+}
+.return_button a {
+  color: #ffad5b;
+}
+.return_button a:hover {
+  color: #ff870f;
+}
+
+.button {
+  min-width: 180px;
 }/*# sourceMappingURL=style.css.map */
