@@ -58,18 +58,13 @@ class QuestionController extends Controller
                 ]);
             }
         }
-
-        // dump($array[1]);
-        // dd($question);
-
         return redirect()->route('www.question.index');
-        // return view('www.question.create',compact('request','pageName'));
     }
 
     public function solve(Request $request){
         $pageName = $this->pageName;
-        // dump($request->id);
-        return view('www.question.solve',compact('request','pageName'));
+        $question = Question::find($request->id);
+        return view('www.question.solve',compact('question','pageName'));
     }
     public function double_explode($word1, $word2,$word3, $word4, $str) {
         $return1 = array();
