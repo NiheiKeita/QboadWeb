@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Hash;
 
@@ -19,7 +20,7 @@ class RegisterController extends Controller
 
         return view('www.register.input');
     }
-    public function complete(Request $request){
+    public function complete(RegisterRequest $request){
         User::create([
             'user_name' => $request->name,
             'email' => $request->email,

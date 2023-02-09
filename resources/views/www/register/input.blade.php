@@ -3,23 +3,6 @@
 @section('content')
 @include('www.layouts.header')
 
-{{-- <main>
-    <article>
-        <div class="side">
-            新規登録
-        </div>
-        <div class="content">
-            <form method="POST" action="{{route('www.register.complete')}}" accept-charset="UTF-8">
-                @csrf
-                <p>名前：<input name="name" type="text" value=""></p>
-                <p>Email<input name="email" type="text" value=""></p>
-                <p>Password：<input name="password" type="text" value=""></p>
-                <input type="submit" value="デフォルト">
-            </form>
-        </div>
-    </article>
-</main> --}}
-
 <main>
     <body class="container">
         <div class="c enter-block">
@@ -28,7 +11,7 @@
                     新規登録
                 </h2>
                 <div class="mt-2 return_button">
-                    <a href="javascript:history.back();">
+                    <a href="{{route('www.top')}}">
                         <div class="text-start align-items-center">
                             <i class="bi bi-chevron-double-left"></i>
                             戻る

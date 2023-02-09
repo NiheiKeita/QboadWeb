@@ -116,6 +116,27 @@ header{
     right: 0px;
     left: 0px;
 }
+.question_create_view{
+    input[type="radio"] {
+        display: none;
+    }
+    input[type="radio"] + label img {
+        opacity:0.2;
+    }
+    input[type="radio"]:checked + label img {
+        opacity:1;
+    }
+    input[type="radio"] + label img {
+        opacity:0.2;
+    }
+    input[type="radio"]:checked + label img {
+        opacity:1;
+    }
+}
+.error_message{
+    font-size: .875em;
+    color: #dc3545;
+}
 .color_thema {
     background-color: #ffad5b;
 }

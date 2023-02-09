@@ -14,7 +14,7 @@
                 <div class="button_wrapper text_wrapper text-center pb-40 mt-5">
                     <a href="{{route('www.register.input')}}">
                         <div class="btn button color_thema_button text-center align-items-center" >
-                            登録
+                            新規登録
                         </div>
                     </a>
                 </div>

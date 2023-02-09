@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Question;
 use App\Models\Choice;
 use App\Models\HashTag;
+use App\Http\Requests\QuestionCreateRequest;
+
 
 class QuestionController extends Controller
 {
@@ -15,7 +17,7 @@ class QuestionController extends Controller
 
     public function index(){
         $pageName = $this->pageName;
-        $questions = Question::where()->get();
+        $questions = Question::get();
 
         return view('www.question.index',compact('pageName','questions'));
     }
@@ -25,30 +27,23 @@ class QuestionController extends Controller
         return view('www.question.create',compact('request','pageName'));
     }
 
-    public function store(Request $request){
+    public function store(QuestionCreateRequest $request){
         $pageName = $this->pageName;
 
-        // $pieces = explode(" ", $request->hash);
-        // dd($pieces);
-
-
-        // $choiceArray = $request->choice;
         $user = Auth::guard('pro')->getUser();
         $pieces = $this->double_explode(' ', '#', '　', '＃', $request->hash);
 
         $question = Question::create([
             'user_id' => $user->id,
-            'question_content' => $request->content,
+            'question_content' => $request->question_content,
         ]);
 
         foreach ($request->choice as $key => $choice){
             $isCorrectChoice = 0;
-            // dump($request->correct);
-            // dump($key);
-            // dump($key == $request->correct);
             if($key == $request->correct){
                 $isCorrectChoice = 1;
             }
+            dump($key == $request->correct);
             Choice::create([
                 'question_id' => $question->id,
                 'choice_content' => $choice,

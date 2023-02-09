@@ -4,7 +4,7 @@
             <img class="h-75 ms-3" src="/public/images/icon_web.png">
         </a>
         <p class="h4 ms-2">
-            <a href="{{ route('www.top') }}" class="h-100 d-flex align-items-center text-dark text-decoration-none">
+            <a href="{{ route('www.top') }}" class="h-100 d-flex align-items-center text-dark text-decoration-none mt-2">
                 QBoad
             </a>
         </p>

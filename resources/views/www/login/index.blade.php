@@ -8,7 +8,7 @@
         <div class="c enter-block">
 
             <div class="mt-2 return_button">
-                <a href="javascript:history.back();">
+                <a href="{{route('www.top')}}">
                     <div class="text-start align-items-center">
                         <i class="bi bi-chevron-double-left"></i>
                         戻る
