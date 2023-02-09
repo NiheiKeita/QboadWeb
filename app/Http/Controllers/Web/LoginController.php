@@ -24,4 +24,8 @@ class LoginController extends Controller
         }
 
     }
+    public function logout(){
+        Auth::guard('pro')->logout();
+        return redirect()->route('www.login.index');
+    }
 }

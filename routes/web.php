@@ -30,6 +30,7 @@ Route::namespace('App\Http\Controllers\Web')->name('www.')->group(function () {
     Route::post('/register/complete', 'RegisterController@complete')->name('register.complete');
     Route::match(['get', 'post'], '/login/index', 'LoginController@index')->name('login.index');
     Route::post('/login/complete', 'LoginController@complete')->name('login.complete');
+    Route::match(['get', 'post'],'/logout', 'LoginController@logout')->name('logout');
 
     Route::middleware('auth:pro')->group(function () {
 

@@ -30,7 +30,7 @@
             </a>
         </li>
         <li class="text-center align-items-center">
-            <a href="">
+            <a href="{{route('www.logout')}}">
                 <i class="bi bi-door-closed-fill"></i>
                 ログアウト
             </a>
