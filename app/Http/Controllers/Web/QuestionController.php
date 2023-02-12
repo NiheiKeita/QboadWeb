@@ -66,6 +66,13 @@ class QuestionController extends Controller
         $question = Question::find($request->id);
         return view('www.question.solve',compact('question','pageName'));
     }
+    public function next(Request $request){
+        // $request->id
+        return redirect()->route('www.question.solve', ['id' => '1']);
+    }
+
+
+
     public function double_explode($word1, $word2,$word3, $word4, $str) {
         $return1 = array();
         $return2 = array();

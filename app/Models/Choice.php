@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Question;
 
 class Choice extends Model
 {
@@ -18,4 +19,8 @@ class Choice extends Model
         "id"
     ];
 
+    Public function questions()
+    {
+        return $this->belongsTo(Question::class);
+    }
 }

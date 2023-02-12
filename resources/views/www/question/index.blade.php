@@ -7,18 +7,12 @@
     <body class="container">
         <div class="c enter-block">
             <div class="container mt-1 col-lg-4 question_list_div">
-                <h2 class="side mt-3 text-center">
+                {{-- <h2 class="side mt-3 text-center">
                     問題一覧
-                </h2>
+                </h2> --}}
                 <div >
                     @foreach ($questions as $question)
-                        {{-- <a href="{{route('www.question.solve',$question->user->id)}}">
-                            <div class="button">
-                                {{$question->question_content}}
-                                {{$question->user->user_name}}
-                            </div>
-                        </a> --}}
-                        <a href="{{route('www.question.solve',$question->user->id)}}" class="text-decoration-none">
+                        <a href="{{route('www.question.solve',$question->id)}}" class="text-decoration-none">
                             <div class="kokuban">
                                 <span class="kokuban_title text-center w-100">問題</span>
                                 <div class="kokuban_inn">

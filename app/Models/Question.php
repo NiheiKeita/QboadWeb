@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\User;
+use App\Models\Choice;
 
 class Question extends Model
 {
@@ -22,5 +23,9 @@ class Question extends Model
     Public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    Public function choices()
+    {
+        return $this->hasMany(Choice::class);
     }
 }

@@ -4,7 +4,6 @@ $(function(){
 });
 
 function _init_button(){
-    console.log("dddd");
     $('.submit_button').each(function () {
         $(this).on('click', function () {
             $(".w_click_prohibition_area").hide();
@@ -23,6 +22,42 @@ function _init_button(){
             console.log($(this).data('action'));
         });
     });
+    $('.js_choice_button').each(function () {
+        $(this).on('click', function () {
+            let isCorrect = $(this).find('.is_correct')[0].value;
+            let choiceId = $(this).find('.choice_id')[0].value;
+            if(isCorrect == 1){
+                document.getElementsByClassName('correct_img')[0].hidden = false;
+                document.getElementsByClassName('error_img')[0].hidden = true;
+            }else{
+                document.getElementsByClassName('error_img')[0].hidden = false;
+                document.getElementsByClassName('correct_img')[0].hidden = true;
+            }
+            document.getElementsByClassName('img_bg_view')[0].hidden = false;
+
+            const elements = document.getElementsByClassName('choice_button');
+            for(let i = 0; i < elements.length; i ++) {
+                let element = elements[i];
+                if(element.getElementsByClassName('is_correct')[0].value == 1){
+                    element.classList.add('choice_correct_button');
+                }else{
+                    element.classList.add('choice_error_button');
+                }
+                element.classList.remove('js_choice_button');
+            }
+            document.getElementsByClassName('solved_area')[0].hidden = false;
+
+        });
+        $('.correct_error_img_remove_button').each(function () {
+            $(this).on('click', function () {
+                const elements = document.getElementsByClassName('correct_error_img_remove_button');
+                for(let i = 0; i < elements.length; i ++) {
+                    elements[i].hidden = true;
+                }
+            });
+        });
+    });
+
 }
 
 function _init_popup() {

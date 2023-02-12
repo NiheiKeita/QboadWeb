@@ -109,7 +109,7 @@
 // }
 header{
     position: fixed;
-    margin-left:calc(-50vw + 50%);
+    // margin-left:calc(-50vw + 50%);
     z-index: 2;
     height: 70px;
     width: 100vw;
@@ -232,7 +232,42 @@ main{
     font-weight: bold;
     font-size: 1.2em;
     color: #fff;
+}
+.correct_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.error_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.choice_correct_button{
+    background-color: #ee8787;
+    pointer-events: none;
+}
+.choice_error_button{
+    background-color: #888484;
+    pointer-events: none;
+    a{
+        cursor:default !important;
     }
+}
+.img_bg_view{
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 $primary: #0d6efd;
 // @import "../node_modules/bootstrap/scss/bootstrap";
