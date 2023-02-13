@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Question;
+use App\Models\Solve;
 
 class User extends Authenticatable
 {
@@ -47,5 +48,9 @@ class User extends Authenticatable
     Public function questions()
     {
         return $this->hasMany(Question::class);
+    }
+    Public function solves()
+    {
+        return $this->hasMany(Solve::class);
     }
 }

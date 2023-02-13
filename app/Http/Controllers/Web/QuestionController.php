@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Question;
 use App\Models\Choice;
 use App\Models\HashTag;
+use App\Models\Solve;
 use App\Http\Requests\QuestionCreateRequest;
 
 
@@ -69,6 +70,22 @@ class QuestionController extends Controller
     public function next(Request $request){
         // $request->id
         return redirect()->route('www.question.solve', ['id' => '1']);
+    }
+
+    public function solve_result(Request $request){
+        $user = Auth::guard('pro')->getUser();
+
+        Solve::create([
+            'user_id' => $user->id,
+            'question_id' => $request->question_id,
+            'choice_id' => $request->choice_id,
+            'is_correct' => $request->is_correct,
+        ]);
+
+        return[
+            "result" => "ok",
+        ];
+
     }
 
 

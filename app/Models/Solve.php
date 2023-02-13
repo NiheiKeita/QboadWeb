@@ -11,9 +11,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\User;
 use App\Models\Choice;
-use App\Models\Solve;
+use App\Models\Question;
 
-class Question extends Model
+class Solve extends Model
 {
     use SoftDeletes;
 
@@ -25,12 +25,12 @@ class Question extends Model
     {
         return $this->belongsTo(User::class);
     }
-    Public function choices()
+    Public function choice()
     {
-        return $this->hasMany(Choice::class);
+        return $this->belongsTo(Choice::class);
     }
-    Public function solves()
+    Public function question()
     {
-        return $this->hasMany(Solve::class);
+        return $this->belongsTo(Question::class);
     }
 }

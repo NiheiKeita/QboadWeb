@@ -47,6 +47,14 @@ function _init_button(){
             }
             document.getElementsByClassName('solved_area')[0].hidden = false;
 
+            var sendData = {
+                'question_id': document.getElementById('question_id').value,
+                'choice_id': choiceId,
+                'is_correct': isCorrect,
+            }
+
+            ajax_send_post('/question/solved/result',sendData);
+
         });
         $('.correct_error_img_remove_button').each(function () {
             $(this).on('click', function () {
@@ -80,5 +88,29 @@ function _popup_open(className) {
         if($(this).hasClass(className)) {
             $(this).addClass('open');
         }
+    });
+}
+
+function ajax_send_post(url,sendData){
+    console.log('ajax_send_post');
+
+    $.ajax({
+        url: url,
+        type: 'POST',
+        dataType: 'json',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
+        },
+        data: sendData,
+    })
+    .done((data) => {
+        console.log("ok");
+        console.log(data);
+    })
+    .fail((data) => {
+        console.log("ng");
+        console.log(data);
+    })
+    .always((data) => {
     });
 }

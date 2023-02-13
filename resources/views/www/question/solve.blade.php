@@ -17,9 +17,10 @@
                 </a>
             </div>
             <div class="container mt-5 col-lg-4">
-                <h2 class="side mt-3 text-center">
+                {{-- <h2 class="side mt-3 text-center">
                     問題を解く画面
-                </h2>
+                </h2> --}}
+                <input id="question_id" value="{{ $question->id }}" hidden>
                 {{-- <form method="POST" >
                     @csrf --}}
                 <div class="kokuban">
