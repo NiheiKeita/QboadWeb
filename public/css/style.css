@@ -108,6 +108,14 @@ main {
   padding: 2.2em 1em 1em;
 }
 
+.kokuban_a {
+  color: #fff;
+}
+
+.kokuban_a:hover {
+  color: #fff;
+}
+
 .kokuban::before, .kokuban::after {
   position: absolute;
   content: "";
@@ -171,4 +179,13 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.three_dots {
+  position: absolute;
+  right: 5px;
+}
+
+.time_text {
+  font-size: 13px;
 }/*# sourceMappingURL=style.css.map */
