@@ -74,6 +74,12 @@ main {
   margin-bottom: max(15px, 5%);
 }
 
+.question_create_user_name {
+  position: absolute;
+  bottom: 10px;
+  right: 7px;
+}
+
 .return_button {
   font-size: 15px;
   position: absolute;
@@ -184,8 +190,13 @@ main {
 .three_dots {
   position: absolute;
   right: 5px;
+  top: 0px;
 }
 
 .time_text {
   font-size: 13px;
+  color: #e9e6e6;
+  position: absolute;
+  top: 0px;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

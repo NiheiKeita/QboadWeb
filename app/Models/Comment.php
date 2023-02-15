@@ -10,12 +10,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\User;
-use App\Models\Choice;
-use App\Models\Solve;
-use App\Models\QuestionLike;
-use App\Models\QuestionComment;
+use App\Models\Question;
 
-class Question extends Model
+class Comment extends Model
 {
     use SoftDeletes;
 
@@ -27,20 +24,8 @@ class Question extends Model
     {
         return $this->belongsTo(User::class);
     }
-    Public function choices()
+    Public function question()
     {
-        return $this->hasMany(Choice::class);
-    }
-    Public function solves()
-    {
-        return $this->hasMany(Solve::class);
-    }
-    Public function question_likes()
-    {
-        return $this->hasMany(QuestionLike::class);
-    }
-    Public function question_comments()
-    {
-        return $this->hasMany(QuestionComment::class);
+        return $this->belongsTo(Question::class);
     }
 }

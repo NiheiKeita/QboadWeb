@@ -19,8 +19,9 @@ class QuestionController extends Controller
     public function index(){
         $pageName = $this->pageName;
         $questions = Question::get();
+        $user = Auth::guard('pro')->getUser();
 
-        return view('www.question.index',compact('pageName','questions'));
+        return view('www.question.index',compact('pageName','questions','user'));
     }
 
     public function create(Request $request){
