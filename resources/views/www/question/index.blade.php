@@ -38,9 +38,17 @@
                                         {{$question->solves->count()}}
                                     </div>
                                     {{-- {{dump($question->question_likes->where('user_id',$user->id))}} --}}
-                                    <div class="heart_count_icon_in_quesiton w-25 @if($question->question_likes->where('user_id',$user->id)) liked @else noliked @endif">
-                                        <i class="bi bi-balloon-heart"></i>
-                                        {{$question->question_likes->count()}}
+                                    <div class="heart_count_icon_in_quesiton w-25 @if(!empty($question->question_likes->where('user_id',$user->id)->first())) liked @else noliked @endif">
+                                        <a href="javascript:void(0)" class="text-decoration-none kokuban_a">
+                                            {{-- <div class="js_heart_count_icon_in_quesiton"> --}}
+                                                <i class="bi bi-balloon-heart js_heart_icon_in_quesiton not_liked_icon"></i>
+                                                <i class="bi bi-balloon-heart-fill js_heart_icon_in_quesiton liked_icon"></i>
+                                            {{-- </div> --}}
+                                        </a>
+                                        <input value="{{$question->question_likes->count()}}" class="js_like_count_num" hidden/>
+                                        <p class="js_like_count">
+                                            {{$question->question_likes->count()}}
+                                        </p>
                                     </div>
                                 </div>
                             </div>

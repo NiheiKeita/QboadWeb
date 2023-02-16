@@ -66,6 +66,26 @@ function _init_button(){
         });
     });
 
+    $('.js_heart_icon_in_quesiton').each(function () {
+        $(this).on('click', function () {
+            var parentNode = $(this).closest('.heart_count_icon_in_quesiton');
+            var countNode = parentNode.find(".js_like_count");
+            var count = parseInt(parentNode.find(".js_like_count_num").val());
+            if(parentNode.hasClass('liked')){
+                parentNode.removeClass('liked');
+                parentNode.addClass('noliked');
+                var newCount = count - 1;
+                parentNode.find(".js_like_count_num").val(newCount);
+                countNode.text(newCount);
+            }else{
+                parentNode.removeClass('noliked');
+                parentNode.addClass('liked');
+                var newCount = count + 1;
+                parentNode.find(".js_like_count_num").val(newCount);
+                countNode.text(newCount);
+            }
+        });
+    });
 }
 
 function _init_popup() {

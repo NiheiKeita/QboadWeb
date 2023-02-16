@@ -150,6 +150,10 @@ main {
   color: #fff;
 }
 
+.question_icon_area {
+  height: 8px;
+}
+
 .correct_img {
   position: absolute;
   top: 50%;
@@ -199,4 +203,16 @@ main {
   position: absolute;
   top: 0px;
   pointer-events: none;
+}
+
+.heart_count_icon_in_quesiton.liked .not_liked_icon {
+  display: none;
+}
+
+.heart_count_icon_in_quesiton.noliked .liked_icon {
+  display: none;
+}
+
+.js_like_count {
+  display: inline-block;
 }/*# sourceMappingURL=style.css.map */
