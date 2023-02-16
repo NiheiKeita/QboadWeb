@@ -43,4 +43,10 @@ class Question extends Model
     {
         return $this->hasMany(QuestionComment::class);
     }
+    Public function getQuestionLikeCountAttribute()
+    {
+        return $this->question_likes->where('is_active',1)->count();
+    }
+
+
 }

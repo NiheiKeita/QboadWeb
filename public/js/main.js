@@ -71,19 +71,35 @@ function _init_button(){
             var parentNode = $(this).closest('.heart_count_icon_in_quesiton');
             var countNode = parentNode.find(".js_like_count");
             var count = parseInt(parentNode.find(".js_like_count_num").val());
+            var sendData = null;
+            var questionId = parentNode.find(".js_question_id").val();
+            var questionLikeId = parentNode.find(".js_question_like_id").val();
+
             if(parentNode.hasClass('liked')){
                 parentNode.removeClass('liked');
                 parentNode.addClass('noliked');
                 var newCount = count - 1;
                 parentNode.find(".js_like_count_num").val(newCount);
                 countNode.text(newCount);
+                var sendData = {
+                    'question_id': questionId,
+                    'liked': 0,
+                    'question_like_id': questionLikeId,
+                }
+
             }else{
                 parentNode.removeClass('noliked');
                 parentNode.addClass('liked');
                 var newCount = count + 1;
                 parentNode.find(".js_like_count_num").val(newCount);
                 countNode.text(newCount);
+                var sendData = {
+                    'question_id': questionId,
+                    'liked': 1,
+                    'question_like_id': questionLikeId,
+                }
             }
+            ajax_send_post('/like/question/update',sendData);
         });
     });
 }

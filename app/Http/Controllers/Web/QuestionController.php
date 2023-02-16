@@ -64,9 +64,10 @@ class QuestionController extends Controller
     }
 
     public function solve(Request $request){
+        $user = Auth::guard('pro')->getUser();
         $pageName = $this->pageName;
         $question = Question::find($request->id);
-        return view('www.question.solve',compact('question','pageName'));
+        return view('www.question.solve',compact('question','pageName','user'));
     }
     public function next(Request $request){
         // $request->id
