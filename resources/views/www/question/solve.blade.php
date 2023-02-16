@@ -70,11 +70,11 @@
                             <i class="bi bi-three-dots"></i>
                         </div>
                     </div>
-                    <a href="{{route('www.question.solve',$question->id)}}" class="text-decoration-none kokuban_a">
+                    <div class="text-decoration-none kokuban_a">
                         <div class="kokuban_inn text-center">
                             <p>{{ $question->question_content }}</p>
                         </div>
-                    </a>
+                    </div>
                     <p class="question_create_user_name text-end">{{ $question->user->user_name }}　より</p>
                     <div class="question_icon_area d-inline-flex p-2 bd-highlight w-100 me-3 ms-3">
                         <div class="comment_count_icon_in_quesiton w-25">
