@@ -28,13 +28,19 @@
                             </a>
                             <p class="question_create_user_name text-end">{{ $question->user->user_name }}　より</p>
                             <div class="question_icon_area d-inline-flex p-2 bd-highlight w-100 me-3 ms-3">
-                                <div class="comment_count_icon_in_quesiton w-25">
-                                    <i class="bi bi-chat-text"></i>
-                                    {{ $question->question_comments->count() }}
+                                <div class="comment_count_icon_in_quesiton w-25 remark_div">
+                                    <a href="javascript:void(0)" class="text-decoration kokuban_a">
+                                        <i class="bi bi-chat-text"></i>
+                                        {{ $question->question_comments->count() }}
+                                        <span class="remark">コメントの合計数</span>
+                                    </a>
                                 </div>
-                                <div class="answer_count_icon_in_quesiton w-25">
-                                    <i class="bi bi-mortarboard"></i>
-                                    {{ $question->solves->count() }}
+                                <div class="answer_count_icon_in_quesiton w-25 remark_div">
+                                    <a href="javascript:void(0)" class="text-decoration kokuban_a">
+                                        <i class="bi bi-mortarboard"></i>
+                                        {{ $question->solves->count() }}
+                                        <span class="remark">今までに解かれた合計数</span>
+                                    </a>
                                 </div>
                                 <?php
                                     $islike = false;

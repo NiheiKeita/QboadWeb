@@ -18,7 +18,7 @@ class QuestionController extends Controller
 
     public function index(){
         $pageName = $this->pageName;
-        $questions = Question::get();
+        $questions = Question::orderBy('id', 'desc')->get();
         $user = Auth::guard('pro')->getUser();
 
         return view('www.question.index',compact('pageName','questions','user'));
