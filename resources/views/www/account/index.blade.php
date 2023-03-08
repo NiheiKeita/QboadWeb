@@ -19,24 +19,24 @@
                                 <div class="col d-flex align-items-center center-block text-center justify-content-center w-100">
                                     <a href="javascript:void(0)" class="text-decoration kokuban_a">
                                         <div class="text-center w-100">
-                                            <div>{{ 0 }}</div>
-                                            <div>投稿</div>
+                                            <div class="mypage_count">{{ 0 }}</div>
+                                            <div class="text_mypage_count">投稿</div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col d-flex align-items-center center-block text-center justify-content-center w-100">
                                     <a href="javascript:void(0)" class="text-decoration kokuban_a">
                                         <div class="text-center w-100">
-                                            <div>{{ 0 }}</div>
-                                            <div>いいね</div>
+                                            <div class="mypage_count">{{ 0 }}</div>
+                                            <div class="text_mypage_count">いいね</div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col d-flex align-items-center center-block text-center justify-content-center w-100">
                                     <a href="javascript:void(0)" class="text-decoration kokuban_a">
                                         <div class="text-center w-100">
-                                            <div>{{ 0 }}</div>
-                                            <div>解答</div>
+                                            <div class="mypage_count">{{ 0 }}</div>
+                                            <div class="text_mypage_count">解答</div>
                                         </div>
                                     </a>
                                 </div>
@@ -45,16 +45,16 @@
                                 <div class="col d-flex align-items-center center-block text-center justify-content-center w-100">
                                     <a href="javascript:void(0)" class="text-decoration kokuban_a">
                                         <div class="text-center w-100">
-                                            <div>{{ 0 }}</div>
-                                            <div>フォロワー</div>
+                                            <div class="mypage_count">{{ 0 }}</div>
+                                            <div class="text_mypage_count">フォロワー</div>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col d-flex align-items-center center-block text-center justify-content-center w-100">
                                     <a href="javascript:void(0)" class="text-decoration kokuban_a">
                                         <div class="">
-                                            <div>{{ 0 }}</div>
-                                            <div>フォロー中</div>
+                                            <div class="mypage_count">{{ 0 }}</div>
+                                            <div class="text_mypage_count">フォロー中</div>
                                         </div>
                                     </a>
                                 </div>

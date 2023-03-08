@@ -254,18 +254,15 @@ main {
   height: 100%;
 }
 .my_data_area .name_other_area .other_area {
-  background-color: blue;
   width: 70%;
   height: 100%;
 }
 .my_data_area .name_other_area .other_area .top_button_area {
-  background-color: red;
   width: 100%;
   height: 50%;
   margin-left: 0% !important;
 }
 .my_data_area .name_other_area .other_area .bottom_button_area {
-  background-color: #000000;
   width: 100%;
   height: 50%;
   margin-left: 0% !important;
@@ -279,4 +276,14 @@ main {
   background-color: blue;
   width: 100%;
   height: 20%;
+}
+
+.text_mypage_count {
+  font-size: 13px;
+  color: #5f5b5b;
+}
+
+.mypage_count {
+  font-size: 18px;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
