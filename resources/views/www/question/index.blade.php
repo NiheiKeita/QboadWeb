@@ -17,8 +17,11 @@
                                 <div class="text-start ms-3 time_text">
                                     {{ $question->created_at->format('H:i Y/m/d') }}
                                 </div>
-                                <div class="three_dots js_three_dots text-end">
-                                    <i class="bi bi-three-dots"></i>
+                                <div class="three_dots js_three_dots text-end mod_dropnavi">
+                                    <a href="javascript:void(0)"  class="text-decoration-none kokuban_a">
+                                        <i class="bi bi-three-dots"></i>
+                                    </a>
+                                    @include('www.layouts.three_dots_menu')
                                 </div>
                             </div>
                             <a href="{{route('www.question.solve',$question->id)}}" class="text-decoration-none kokuban_a">
