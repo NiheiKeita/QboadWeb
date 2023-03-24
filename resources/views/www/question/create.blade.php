@@ -57,8 +57,8 @@
                             @for ($i = 1; $i <= 3; $i++)
                             {{-- {{dump($errors->first("choice.$i"))}} --}}
                                 <div class="mt-3 ms-3 text-start d-flex">
-                                    <input  class="correct_radio" id="radio_[{{$i}}]" type="radio" name="correct" value="{{$i}}" @if(old("correct[$i]")=="correct[$i]") checked @elseif($i==1) checked @endif>
-                                    <label  for="radio_[{{$i}}]">
+                                    <input class="correct_radio" id="radio_[{{$i}}]" type="radio" name="correct" value="{{$i}}" @if(old("correct[$i]")=="correct[$i]") checked @elseif($i==1) checked @endif>
+                                    <label for="radio_[{{$i}}]">
                                         <img src="/public/images/icon_web.png" with="40" height="40">
                                     </label>
 

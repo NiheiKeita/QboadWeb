@@ -19,11 +19,8 @@ main {
 .question_create_view input[type=radio] {
   display: none;
 }
-.question_create_view input[type=radio] + label img {
-  opacity: 0.2;
-}
-.question_create_view input[type=radio]:checked + label img {
-  opacity: 1;
+.question_create_view input[type=radio] + label {
+  cursor: pointer;
 }
 .question_create_view input[type=radio] + label img {
   opacity: 0.2;
