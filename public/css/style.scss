@@ -360,9 +360,82 @@ main{
         height: 10%;
     }
     .button_area{
-        background-color: blue;
+        // background-color: blue;
         width: 100%;
         height: 20%;
+    }
+}
+.mypage_tab_area{
+    background-color: blue;
+    top: 0px;
+    bottom: 0px;
+}
+.mypage_tab_switch_area{
+    // background-color: blue;
+    height:50px;
+
+    .sp-fixed-menu{
+        // position: fixed;
+        // width: max(50%, min(100%,500px));
+        width: 100%;
+        // bottom: 0;
+        // right: 0;
+        // left: 0;
+        margin: auto;
+        text-align: center;
+        font-size: 16px;
+        opacity: 0.9;
+        z-index: 99;
+        ul{
+            display: flex;
+            list-style: none;
+            padding:0;
+            margin:0;
+            width:100%;
+            height: 50px;
+            li {
+                border-top: 1px solid #EEEEEE;
+                border-left: 1px solid #EEEEEE;
+                border-right: 1px solid #EEEEEE;
+            }
+            li+ li {
+                border-left: 0;
+                border-right: 1px solid #EEEEEE;
+            }
+            li.not_selected {
+                background-color: #fde3e3;
+            }
+            li.not_selected :hover{
+                background-color: #fdd6d6;
+            }
+            li.selected {
+                background-color: #99CCFF;
+            }
+            li.selected :hover{
+                background-color: #cbe0f5;
+            }
+            li{
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                padding:0;
+                margin:0;
+                font-size: 14px;
+                a{
+                    position: relative;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    div{
+                        position: absolute;
+                        top:50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
 .text_mypage_count{

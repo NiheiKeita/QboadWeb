@@ -29,7 +29,7 @@
                 マイメニュー
             </a>
         </li>
-        <li class="text-center align-items-center d-flex justify-content-center">
+        <li class="text-center align-items-center d-flex justify-content-center mt-5">
             <a href="{{route('www.logout')}}" class="text-start">
                 <i class="bi bi-door-closed-fill"></i>
                 ログアウト

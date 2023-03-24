@@ -102,8 +102,74 @@ function _init_button(){
             ajax_send_post('/like/question/update',sendData);
         });
     });
+
+
+    $('.js_unique_user_id').each(function () {
+        $(this).on('click', function () {
+            console.log("js_unique_user_id");
+            var copyTarget = document.getElementById("unique_user_id_copy");
+            const textCode = copyTarget.value;
+            copytoClipboarad(textCode);
+        });
+    });
+    $('.js_mypage_tab_switch_area_question').each(function () {
+        $(this).on('click', function () {
+            tab_switch_area_reset()
+            $(this).removeClass('not_selected');
+            $(this).addClass('selected');
+            $(".js_mypage_tab_area_question").show();
+        });
+    });
+    $('.js_mypage_tab_switch_area_history').each(function () {
+        $(this).on('click', function () {
+            tab_switch_area_reset()
+            $(this).removeClass('not_selected');
+            $(this).addClass('selected');
+            $(".js_mypage_tab_area_history").show();
+        });
+    });
+    $('.js_mypage_tab_switch_area_mylist').each(function () {
+        $(this).on('click', function () {
+            tab_switch_area_reset()
+            $(this).removeClass('not_selected');
+            $(this).addClass('selected');
+            $(".js_mypage_tab_area_mylist").show();
+        });
+    });
+    $('.js_mypage_tab_switch_area_save').each(function () {
+        $(this).on('click', function () {
+            tab_switch_area_reset()
+            $(this).removeClass('not_selected');
+            $(this).addClass('selected');
+            $(".js_mypage_tab_area_save").show();
+        });
+    });
 }
 
+function tab_switch_area_reset(){
+    $(".js_mypage_tab_switch_area_question").removeClass('selected');
+    $(".js_mypage_tab_switch_area_history").removeClass('selected');
+    $(".js_mypage_tab_switch_area_mylist").removeClass('selected');
+    $(".js_mypage_tab_switch_area_save").removeClass('selected');
+    $(".js_mypage_tab_switch_area_question").addClass('not_selected');
+    $(".js_mypage_tab_switch_area_history").addClass('not_selected');
+    $(".js_mypage_tab_switch_area_mylist").addClass('not_selected');
+    $(".js_mypage_tab_switch_area_save").addClass('not_selected');
+
+    $(".js_mypage_tab_area_question").hide();
+    $(".js_mypage_tab_area_history").hide();
+    $(".js_mypage_tab_area_mylist").hide();
+    $(".js_mypage_tab_area_save").hide();
+}
+
+async function copytoClipboarad(target) {
+    try {
+        await navigator.clipboard.writeText(target)
+        alert("”"+target+'” をコピーしました')
+    } catch (error) {
+        // alert((error && error.message) || 'コピーに失敗しちゃった...')
+    }
+};
 function _init_popup() {
     $('.popup_open').click(function() {
         console.log("_init_popup");

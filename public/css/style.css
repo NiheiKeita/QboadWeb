@@ -270,9 +270,76 @@ main {
   height: 10%;
 }
 .my_data_area .button_area {
-  background-color: blue;
   width: 100%;
   height: 20%;
+}
+
+.mypage_tab_area {
+  background-color: blue;
+  top: 0px;
+  bottom: 0px;
+}
+
+.mypage_tab_switch_area {
+  height: 50px;
+}
+.mypage_tab_switch_area .sp-fixed-menu {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.9;
+  z-index: 99;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li {
+  border-top: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-right: 1px solid #EEEEEE;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li + li {
+  border-left: 0;
+  border-right: 1px solid #EEEEEE;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li.not_selected {
+  background-color: #fde3e3;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li.not_selected :hover {
+  background-color: #fdd6d6;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li.selected {
+  background-color: #99CCFF;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li.selected :hover {
+  background-color: #cbe0f5;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li {
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li a {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.mypage_tab_switch_area .sp-fixed-menu ul li a div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .text_mypage_count {
